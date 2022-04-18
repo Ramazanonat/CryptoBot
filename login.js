@@ -8,7 +8,6 @@ var csrfToken = '';
 
 const serverUrl = "https://jbfwl2hktba9.usemoralis.com:2053/server";
 const appId = "KwTszDen47DBZGnGSwbMv1RfEons7lcRHSUHk4vk";
-const web3 = Moralis.enableWeb3();
 
 
 Moralis.start({serverUrl, appId});
