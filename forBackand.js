@@ -18,42 +18,46 @@ var customHeader = {
 }
 
 while (true) {
-    await fetch("https://game.worker.town/api/workers", {
-        headers: customHeader, method: "get", credentials: "same-origin",
-    })
-        .then(res => res.json())
-        .catch(error => console.error('Error:', error))
-        .then(async response => {
-            console.log(response)
-            if (response[0].resting_until == null && response[0].working_until == null) {
-                await postData("https://game.worker.town/api/workers/work", {"worker_id": "5284"})
-                console.log("IDLE")
-            } else if (response[0].resting_until != null && Math.floor(new Date(response[0].resting_until).getTime() / 1000) <= Math.floor(Date.now() / 1000)) {
-                await postData("https://game.worker.town/api/workers/rest/callback", {"worker_id": "5284"})
-                console.log("GO TO WORK")
-                await postData("https://game.worker.town/api/workers/work", {"worker_id": "5284"})
-            } else if (response[0].working_until != null && Math.floor(new Date(response[0].working_until).getTime() / 1000) <= Math.floor(Date.now() / 1000)) {
-                await postData("https://game.worker.town/api/workers/work/callback", {"worker_id": "5284"})
-                console.log("GO TO RESTING")
-                await postData("https://game.worker.town/api/workers/rest", {"worker_id": "5284"})
-            } else if (response[0].working_until != null && Math.floor(new Date(response[0].working_until).getTime() / 1000) >= Math.floor(Date.now() / 1000)) {
-                if (Math.floor(new Date(response[0].shift.shift_1_time).getTime() / 1000) <= Math.floor(Date.now() / 1000) && response[0].shift.shift_1_eaten === 0) {
-                    await postData('https://game.worker.town/api/workers/feed', {"worker_id": "5284", "shift": 1})
-                    console.log("SHIFT 1")
-                } else if (Math.floor(new Date(response[0].shift.shift_2_time).getTime() / 1000) <= Math.floor(Date.now() / 1000) && response[0].shift.shift_2_eaten === 0) {
-                    console.log("SHIFT 2")
-                    await postData('https://game.worker.town/api/workers/feed', {"worker_id": "5284", "shift": 2})
-                } else if (Math.floor(new Date(response[0].shift.shift_3_time).getTime() / 1000) <= Math.floor(Date.now() / 1000) && response[0].shift.shift_3_eaten === 0) {
-                    await postData('https://game.worker.town/api/workers/feed', {"worker_id": "5284", "shift": 3})
-                    console.log("SHIFT 3")
-                } else if (Math.floor(new Date(response[0].shift.shift_4_time).getTime() / 1000) <= Math.floor(Date.now() / 1000) && response[0].shift.shift_4_eaten === 0) {
-                    await postData('https://game.worker.town/api/workers/feed', {"worker_id": "5284", "shift": 4})
-                    console.log("SHIFT 4")
+    try {
+        await fetch("https://game.worker.town/api/workers", {
+            headers: customHeader, method: "get", credentials: "same-origin",
+        })
+            .then(res => res.json())
+            .catch(error => console.error('Error:', error))
+            .then(async response => {
+                console.log(response)
+                if (response[0].resting_until == null && response[0].working_until == null) {
+                    await postData("https://game.worker.town/api/workers/work", {"worker_id": "5284"})
+                    console.log("IDLE")
+                } else if (response[0].resting_until != null && Math.floor(new Date(response[0].resting_until).getTime() / 1000) <= Math.floor(Date.now() / 1000)) {
+                    await postData("https://game.worker.town/api/workers/rest/callback", {"worker_id": "5284"})
+                    console.log("GO TO WORK")
+                    await postData("https://game.worker.town/api/workers/work", {"worker_id": "5284"})
+                } else if (response[0].working_until != null && Math.floor(new Date(response[0].working_until).getTime() / 1000) <= Math.floor(Date.now() / 1000)) {
+                    await postData("https://game.worker.town/api/workers/work/callback", {"worker_id": "5284"})
+                    console.log("GO TO RESTING")
+                    await postData("https://game.worker.town/api/workers/rest", {"worker_id": "5284"})
+                } else if (response[0].working_until != null && Math.floor(new Date(response[0].working_until).getTime() / 1000) >= Math.floor(Date.now() / 1000)) {
+                    if (Math.floor(new Date(response[0].shift.shift_1_time).getTime() / 1000) <= Math.floor(Date.now() / 1000) && response[0].shift.shift_1_eaten === 0) {
+                        await postData('https://game.worker.town/api/workers/feed', {"worker_id": "5284", "shift": 1})
+                        console.log("SHIFT 1")
+                    } else if (Math.floor(new Date(response[0].shift.shift_2_time).getTime() / 1000) <= Math.floor(Date.now() / 1000) && response[0].shift.shift_2_eaten === 0) {
+                        console.log("SHIFT 2")
+                        await postData('https://game.worker.town/api/workers/feed', {"worker_id": "5284", "shift": 2})
+                    } else if (Math.floor(new Date(response[0].shift.shift_3_time).getTime() / 1000) <= Math.floor(Date.now() / 1000) && response[0].shift.shift_3_eaten === 0) {
+                        await postData('https://game.worker.town/api/workers/feed', {"worker_id": "5284", "shift": 3})
+                        console.log("SHIFT 3")
+                    } else if (Math.floor(new Date(response[0].shift.shift_4_time).getTime() / 1000) <= Math.floor(Date.now() / 1000) && response[0].shift.shift_4_eaten === 0) {
+                        await postData('https://game.worker.town/api/workers/feed', {"worker_id": "5284", "shift": 4})
+                        console.log("SHIFT 4")
+                    }
                 }
-            }
-        });
-    console.log("WAITING 15 MINUTES");
-    await sleep(1000*60*15);
+            });
+        console.log("WAITING 15 MINUTES");
+        await sleep(1000 * 60 * 15);
+    } catch (e) {
+        console.log(e);
+    }
 }
 
 async function postData(url = '', data = {}) {
