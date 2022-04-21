@@ -72,8 +72,26 @@ while (true) {
                             console.log("SHIFT 4 |" + workerId)
                         }
                     }
+                    if (worker.resting_until != null && Math.floor(new Date(worker.resting_until).getTime() / 1000) >= Math.floor(Date.now() / 1000)) {
+                        console.log(workerId + " RESTING !")
+                    } else if (worker.working_until != null && Math.floor(new Date(worker.working_until).getTime() / 1000) >= Math.floor(Date.now() / 1000)) {
+                        if (worker.shift.shift_1_eaten === 0) {
+                            console.log(workerId + " WORKING ! | SHIFT 1")
+                        } else if (worker.shift.shift_2_eaten === 0) {
+                            console.log(workerId + " WORKING ! | SHIFT 1")
+                        } else if (worker.shift.shift_3_eaten === 0) {
+                            console.log(workerId + " WORKING ! | SHIFT 2")
+                        } else if (worker.shift.shift_4_eaten === 0) {
+                            console.log(workerId + " WORKING ! | SHIFT 3")
+                        } else {
+                            console.log(workerId + " WORKING ! | SHIFT 4")
+                        }
+                    } else {
+                        console.log(workerId + "IDLE")
+                    }
                 }
             });
+
         console.log("WAITING 10 MINUTES | CHECKED TIME => " + new Date().toLocaleString("tr-TR", {timeZone: 'Europe/Istanbul'}));
         await sleep(1000 * 60 * 15);
     } catch (e) {
