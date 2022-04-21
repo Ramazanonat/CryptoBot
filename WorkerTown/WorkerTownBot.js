@@ -35,7 +35,7 @@ while (true) {
                         await postData("https://game.worker.town/api/workers/work", {"worker_id": workerId})
                         console.log(workerId + " IDLE")
                     } else if (worker.resting_until != null) {
-                        if (Math.floor(new Date(worker.resting_until).getTime() / 1000) <= Math.floor(Date.now() / 1000)) {
+                        if (Math.floor(new Date(worker.resting_until).getTime() / 1000) + 10800 <= Math.floor(Date.now() / 1000)) {
                             await postData("https://game.worker.town/api/workers/rest/callback", {"worker_id": workerId})
                             console.log(workerId + " GO TO WORK")
                             await postData("https://game.worker.town/api/workers/work", {"worker_id": "5284"})
@@ -44,7 +44,7 @@ while (true) {
                         }
 
                     } else if (worker.working_until != null) {
-                        if (Math.floor(new Date(worker.working_until).getTime() / 1000) <= Math.floor(Date.now() / 1000)) {
+                        if (Math.floor(new Date(worker.working_until).getTime() / 1000) + 10800 <= Math.floor(Date.now() / 1000)) {
                             await postData("https://game.worker.town/api/workers/work/callback", {"worker_id": workerId})
                             console.log(workerId + " GO TO RESTING")
                             await postData("https://game.worker.town/api/workers/rest", {
@@ -56,26 +56,26 @@ while (true) {
                             console.log(workerId + " WORKING!")
                         }
 
-                    } else if (worker.working_until != null && Math.floor(new Date(worker.working_until).getTime() / 1000) >= Math.floor(Date.now() / 1000)) {
-                        if (Math.floor(new Date(worker.shift.shift_1_time).getTime() / 1000) <= Math.floor(Date.now() / 1000) && worker.shift.shift_1_eaten === 0) {
+                    } else if (worker.working_until != null && Math.floor(new Date(worker.working_until).getTime() / 1000) + 10800 >= Math.floor(Date.now() / 1000)) {
+                        if (Math.floor(new Date(worker.shift.shift_1_time).getTime() / 1000) + 10800 <= Math.floor(Date.now() / 1000) && worker.shift.shift_1_eaten === 0) {
                             await postData('https://game.worker.town/api/workers/feed', {
                                 "worker_id": workerId,
                                 "shift": 1
                             })
                             console.log(workerId, +" SHIFT 1")
-                        } else if (Math.floor(new Date(worker.shift.shift_2_time).getTime() / 1000) <= Math.floor(Date.now() / 1000) && worker.shift.shift_2_eaten === 0) {
+                        } else if (Math.floor(new Date(worker.shift.shift_2_time).getTime() / 1000) + 10800 <= Math.floor(Date.now() / 1000) && worker.shift.shift_2_eaten === 0) {
                             await postData('https://game.worker.town/api/workers/feed', {
                                 "worker_id": workerId,
                                 "shift": 2
                             })
                             console.log(workerId + " SHIFT 2")
-                        } else if (Math.floor(new Date(worker.shift.shift_3_time).getTime() / 1000) <= Math.floor(Date.now() / 1000) && worker.shift.shift_3_eaten === 0) {
+                        } else if (Math.floor(new Date(worker.shift.shift_3_time).getTime() / 1000) + 10800 <= Math.floor(Date.now() / 1000) && worker.shift.shift_3_eaten === 0) {
                             await postData('https://game.worker.town/api/workers/feed', {
                                 "worker_id": workerId,
                                 "shift": 3
                             })
                             console.log(workerId + " SHIFT 3")
-                        } else if (Math.floor(new Date(worker.shift.shift_4_time).getTime() / 1000) <= Math.floor(Date.now() / 1000) && worker.shift.shift_4_eaten === 0) {
+                        } else if (Math.floor(new Date(worker.shift.shift_4_time).getTime() / 1000) + 10800 <= Math.floor(Date.now() / 1000) && worker.shift.shift_4_eaten === 0) {
                             await postData('https://game.worker.town/api/workers/feed', {
                                 "worker_id": workerId,
                                 "shift": 4
@@ -85,7 +85,7 @@ while (true) {
                     }
                 }
             });
-        console.log("WAITING 10 MINUTES \n CHECKED TIME => " + new Date());
+        console.log("WAITING 10 MINUTES | CHECKED TIME => " + new Date().toLocaleString("tr-TR", {timeZone: 'Europe/Istanbul'}));
         await sleep(1000 * 60 * 10);
     } catch (e) {
         console.log(e);
