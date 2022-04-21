@@ -3,7 +3,7 @@ import fetch from 'node-fetch';
 const kuki = "_ga=GA1.1.1347802490.1649865193; _ga_P9DQW7WC46=GS1.1.1650416115.44.1.1650416144.0; XSRF-TOKEN=eyJpdiI6InFaSEJtTWd1NUtUODZONFFabkNrWUE9PSIsInZhbHVlIjoiZmtMNlRHaDJscFU1K2FOdS9zcldnS1ZWU3E5dXpTaVZwVWhBcGNDVzI0ZFdJa2lVaEhJMXFCOFR3NCswMkFrRW5mM204Y3YySGFsOUs5VjJhbGx0MThoOE5QYTRxR3ZUdXJTaEFNa3pYMkhUdTRwa1pveW8yMXpPeEhJazJkeWwiLCJtYWMiOiIyOTc3MmM1OTc0OWU1MDUyOTE1ZTc2MTVhMWUyOTRjM2IwMWI5MzdiZTQ2YTdmMzJhYTU1YjlhZmYyNTQ3NTRmIiwidGFnIjoiIn0%3D; workertown_session=eyJpdiI6Ii82bmNXUHdFVDg3SHlIWHBXY0ZqMXc9PSIsInZhbHVlIjoiNXNNR3I1a21XQlhLbldqcVBrdWU1NjB6OHg2bjhlb05QMVRXZkFXalpwSUNxeTJQaVljZ09ORjRlNXd6aXh0SjdveFdJVmd1aVVPcno3by8rb3JKY095YUJ1UERsY0h0ZVlSQ2VNYlpTdVBDdHNYVUlWOWZMOFQzMWs0NG5vQVciLCJtYWMiOiI0ZDFiNDVjMzMwMzc0ZjhhNjNlMmQwM2YyMWZkM2ZjZDNjNzAzYjFhOTNkNTM1YzBlMzU3MjhkMTg1YjIwYzUxIiwidGFnIjoiIn0%3D";
 const csrfToken = "MutIwdvOiqv16PqrhFse1xFSjH6m87Bz6E63u29Z";
 
-var customHeader = {
+const customHeader = {
     "accept": "application/json",
     "accept-language": "tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7",
     "cache-control": "no-cache",
@@ -18,7 +18,7 @@ var customHeader = {
     "x-csrf-token": csrfToken,
     "x-requested-with": "XMLHttpRequest",
     "cookie": kuki
-}
+};
 
 while (true) {
     try {
