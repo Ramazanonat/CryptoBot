@@ -1,8 +1,10 @@
 import fetch from 'node-fetch';
+import * as fs from 'fs';
 
-const kuki = "_ga=GA1.1.1347802490.1649865193; XSRF-TOKEN=eyJpdiI6Ijd6ZVF4RytIZEx4QVgvS2hXSlZxTnc9PSIsInZhbHVlIjoiWXBJOFR3dCs2cEg0Q0w1QmtHMjdNUnhjckpzUGpHQ3lVSmh2MUhxc2dEOVdIRWxnemc0M2RWdXdTeGI4dGladVozejlveGs5TmhOVkx3cC9nL1RuUXVNZGw5ZUxVK09kUTdjcGVrMTlMWEhqZU5ZaEFiMUszVmdsVTBsVGVheUgiLCJtYWMiOiIzNDc4NDVhODVlYzczMmFjYzAyM2ZmMDA4M2I1NzVkNjdlOWM4YTQzYTU3YWRhYzMxNmVjYjY0Nzc2YWFmNGE5IiwidGFnIjoiIn0=; workertown_session=eyJpdiI6IllEV25GVS9sVURWaHJFY3JpR3hXTEE9PSIsInZhbHVlIjoiS0x1VHBYdTdBVExMLzBRbTFudEx0QzF3Q3dGenN5MUt2M1RXRnd3QlNDZFQrbldUOUlxa00zRnJFeGliMGo5S1FzN0I2SnFxM3BmRkpjS0tRcHg2c1NxKzFXLzN1Mlh0VVVDMDVxQXRiWVlwbjdCY2FVclpVaFQxd1NjQkYvTEwiLCJtYWMiOiIxOTA1NDQyYzIyNjhhYzRmYzc3Zjc0NTg0NmQ3MzYyNTc4ZWEwM2U3ZmMyNmVmMDY2YzZjYzY1YTNjOGM3Y2M2IiwidGFnIjoiIn0=; _ga_P9DQW7WC46=GS1.1.1650572868.51.1.1650576080.0";
 
-const csrfToken = "WtDW52BzaAsxiVJD7mWeL7rKwSuGIaFKKcwvOEPP";
+const kuki = "_ga=GA1.1.47641056.1649914779; XSRF-TOKEN=eyJpdiI6IjRFenU5MG9xSklwL2F1c3NOWjBEOFE9PSIsInZhbHVlIjoiUk14eW1JSzZWTkdBdHVUcXZMNEFTaXlJem5hM0MyR082bGV0ajFXTUVVUU9YaU1Hekc2ZkQrOFN3dHpvOEJ4eEZSK1Q4SVMzdDIvSWk0dEVRZnNPUkppeFZ6TDZSWjJCQTdFa3lob2UyL3ljMDZRaTM3dDBMWXJZOHVmenhPSloiLCJtYWMiOiI0ZWY1NDczODM5OTg1MDM1ODM1ZGVjYmU3NjdmODYxMzcyMjgxMTZhN2NhODNjNjlkNjE3NzdjYWYyZWNlMTg0IiwidGFnIjoiIn0%3D; workertown_session=eyJpdiI6Imw0Slp4UjdEcEFBaEgzT0Z0bXJFY0E9PSIsInZhbHVlIjoicm1MYUdFZ24wRlI4VlNOSkliOG1wVHJObDZPVkVna0M5K0JidEVoSER5d00va0JMdTN6V3FrOHcxUmc5SGRRK0RwV0h0Vjk0MXM5US9vZ0VwcE01YTVQVTdZL2gzMjU4S1h3TmZZdTVYRHRUanNKSTZEdjRTRVpVZEJxRjZnRXUiLCJtYWMiOiI5NDY5ODNkOTkyMDQ0ZDNiYzUxZTEzODY3YzBlODk4OTRmMzg3N2JmODIzOGRjM2U0NThiMjI0NTY0MGE0MzJhIiwidGFnIjoiIn0%3D; _ga_P9DQW7WC46=GS1.1.1651048709.45.0.1651048709.0";
+
+const csrfToken = "fifT74oxAP93JhLQFJPphyN7Rjnh27Y9wJQloxnC";
 
 const customHeader = {
     "accept": "application/json",
@@ -21,12 +23,15 @@ const customHeader = {
     "cookie": kuki
 };
 
-const lastProcess = {
-    4511: 'WORK',
-    5284: 'REST'
-};
+let dailyIncome = 0;
+const today = new Date()
 
 while (true) {
+    let time = today.getHours() + ":" + today.getMinutes()
+
+    if (time === "23:59") {
+        dailyIncome = 0;
+    }
     try {
         await fetch("https://game.worker.town/api/workers", {
             headers: customHeader, method: "get", credentials: "same-origin",
@@ -34,87 +39,93 @@ while (true) {
             .then(res => res.json())
             .catch(error => console.error('Error:', error))
             .then(async response => {
-                for (let worker of response) {
-                    let workerId = worker.id;
-                    if (worker.resting_until == null && worker.working_until == null) {
-                        await postData("https://game.worker.town/api/workers/work", {"worker_id": workerId})
-                        if (lastProcess === 'WORK') {
+                for (const worker of response) {
+                    const workerId = worker.id;
+                    switch (worker.status_id) {
+                        case 1:
+                            console.log(worker.id + " IDLE !");
+                            await postData("https://game.worker.town/api/workers/work", {"worker_id": workerId})
+                            break;
+                        case 2:
+                            console.log(worker.id + " Working ! UNTIL: " + worker.working_until);
+
+                            if (worker.shift.shift_1_eaten === 0) {
+                                await postData('https://game.worker.town/api/workers/feed', {
+                                    "worker_id": workerId,
+                                    "shift": 1
+                                });
+                                console.log("SHIFT 1 | " + workerId)
+                            } else if (worker.shift.shift_2_eaten === 0) {
+                                await postData('https://game.worker.town/api/workers/feed', {
+                                    "worker_id": workerId,
+                                    "shift": 2
+                                });
+                                console.log("SHIFT 2 | " + workerId)
+                            } else if (worker.shift.shift_3_eaten === 0) {
+                                await postData('https://game.worker.town/api/workers/feed', {
+                                    "worker_id": workerId,
+                                    "shift": 3
+                                });
+                                console.log("SHIFT 3 | " + workerId)
+                            } else if (worker.shift.shift_4_eaten === 0) {
+                                await postData('https://game.worker.town/api/workers/feed', {
+                                    "worker_id": workerId,
+                                    "shift": 4
+                                });
+                                console.log("SHIFT 4 | " + workerId)
+                            }
+                            if (Math.floor(new Date(worker.working_until).getTime() / 1000) <= Math.floor(Date.now() / 1000)) {
+                                await postData("https://game.worker.town/api/workers/work/callback", {"worker_id": workerId});
+                                dailyIncome += 169;
+                                fs.writeFile('incomeLog.txt', workerId + " WORKERS COME WORK! " + today.getDate() + ":" + today.getHours() + ":" + today.getMinutes() + " DAILY INCOMED COIN :" + dailyIncome, err => {
+                                    if (err) {
+                                        console.error(err);
+                                    }
+                                });
+                                await postData("https://game.worker.town/api/workers/rest", {
+                                    "worker_id": workerId,
+                                    "house_id": 5990,
+                                    "slot": 1
+                                });
+                            }
+
+                            break;
+                        case 3:
+                            console.log(worker.id + " Exhausted !");
                             await postData("https://game.worker.town/api/workers/rest", {
                                 "worker_id": workerId,
                                 "house_id": 5990,
                                 "slot": 1
-                            })
-                        }
-                        console.log("IDLE " + workerId)
-                    } else if (worker.resting_until != null && Math.floor(new Date(worker.resting_until).getTime() / 1000) <= Math.floor(Date.now() / 1000)) {
-                        await postData("https://game.worker.town/api/workers/rest/callback", {"worker_id": workerId})
-                        console.log("GO TO WORK" + workerId)
-                        await postData("https://game.worker.town/api/workers/work", {"worker_id": workerId})
-                    } else if (worker.working_until != null && Math.floor(new Date(worker.working_until).getTime() / 1000) <= Math.floor(Date.now() / 1000)) {
-                        await postData("https://game.worker.town/api/workers/work/callback", {"worker_id": workerId})
-                        console.log("GO TO RESTING" + workerId)
-                        await postData("https://game.worker.town/api/workers/rest", {
-                            "worker_id": workerId,
-                            "house_id": 5990,
-                            "slot": 1
-                        })
-                        lastProcess.workerId = 'WORK'
-                    } else if (worker.working_until != null && Math.floor(new Date(worker.working_until).getTime() / 1000) >= Math.floor(Date.now() / 1000)) {
-                        if (Math.floor(new Date(worker.shift.shift_1_time).getTime() / 1000) <= Math.floor(Date.now() / 1000) && worker.shift.shift_1_eaten === 0) {
-                            await postData('https://game.worker.town/api/workers/feed', {
-                                "worker_id": workerId,
-                                "shift": 1
-                            })
-                            console.log("SHIFT 1 | " + workerId)
-                        } else if (Math.floor(new Date(worker.shift.shift_2_time).getTime() / 1000) <= Math.floor(Date.now() / 1000) && worker.shift.shift_2_eaten === 0) {
-                            await postData('https://game.worker.town/api/workers/feed', {
-                                "worker_id": workerId,
-                                "shift": 2
-                            })
-                            console.log("SHIFT 2 | " + workerId)
-                        } else if (Math.floor(new Date(worker.shift.shift_3_time).getTime() / 1000) <= Math.floor(Date.now() / 1000) && worker.shift.shift_3_eaten === 0) {
-                            await postData('https://game.worker.town/api/workers/feed', {
-                                "worker_id": workerId,
-                                "shift": 3
-                            })
-                            console.log("SHIFT 3 | " + workerId)
-                        } else if (Math.floor(new Date(worker.shift.shift_4_time).getTime() / 1000) <= Math.floor(Date.now() / 1000) && worker.shift.shift_4_eaten === 0) {
-                            await postData('https://game.worker.town/api/workers/feed', {
-                                "worker_id": workerId,
-                                "shift": 4
-                            })
-                            console.log("SHIFT 4 | " + workerId)
-                        }
-                    }
-                    if (worker.resting_until != null && Math.floor(new Date(worker.resting_until).getTime() / 1000) >= Math.floor(Date.now() / 1000)) {
-                        console.log(workerId + " RESTING !")
-                    } else if (worker.working_until != null && Math.floor(new Date(worker.working_until).getTime() / 1000) >= Math.floor(Date.now() / 1000)) {
-                        if (worker.shift.shift_1_eaten === 0) {
-                            console.log(workerId + " WORKING ! | SHIFT 1")
-                        } else if (worker.shift.shift_2_eaten === 0) {
-                            console.log(workerId + " WORKING ! | SHIFT 1")
-                        } else if (worker.shift.shift_3_eaten === 0) {
-                            console.log(workerId + " WORKING ! | SHIFT 2")
-                        } else if (worker.shift.shift_4_eaten === 0) {
-                            console.log(workerId + " WORKING ! | SHIFT 3")
-                        } else {
-                            console.log(workerId + " WORKING ! | SHIFT 4")
-                        }
-                    } else {
-                        console.log(workerId + " IDLE")
+                            });
+
+                            break;
+                        case 4:
+                            console.log(worker.id + " Resting ! UNTIL: " + worker.resting_until);
+
+                            if (Math.floor(new Date(worker.resting_until).getTime() / 1000) <= Math.floor(Date.now() / 1000)) {
+                                await postData("https://game.worker.town/api/workers/rest/callback", {"worker_id": workerId})
+                                await postData("https://game.worker.town/api/workers/work", {"worker_id": workerId})
+                            }
+
+                            break;
+                        case 5:
+                            console.log(worker.id + " Questing !");
+                            break;
+                        case 6:
+                            console.log(worker.id + " WorldBossing !");
+                            break;
                     }
                 }
             });
 
-        console.log("WAITING 10 MINUTES | CHECKED TIME => " + new Date().toLocaleString("tr-TR", {timeZone: 'Europe/Istanbul'}));
-        await sleep(1000 * 60 * 5);
+        console.log("WAITING 15 MINUTES | CHECKED TIME => " + new Date());
+        await sleep(1000 * 60 * 15);
     } catch (e) {
         console.log(e);
     }
 }
 
 async function postData(url = '', data = {}) {
-    // Default options are marked with *
     const response = await fetch(url, {
         method: 'POST', // *GET, POST, PUT, DELETE, etc.
         headers: customHeader,
