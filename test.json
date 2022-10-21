@@ -104,7 +104,7 @@
 							"formdata": [
 								{
 									"key": "email",
-									"value": "txtx436872@gmail.com",
+									"value": "ramazan.onat6@tsoft.com.tr",
 									"type": "text"
 								},
 								{
@@ -114,17 +114,22 @@
 								},
 								{
 									"key": "name",
-									"value": "muhsin",
+									"value": "ramazan",
 									"type": "text"
 								},
 								{
 									"key": "surname",
-									"value": "erturk",
+									"value": "onat",
 									"type": "text"
 								},
 								{
 									"key": "password_again",
 									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "05307997100",
 									"type": "text"
 								}
 							]
@@ -144,6 +149,7 @@
 				{
 					"name": "kim",
 					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
 						"disabledSystemHeaders": {
 							"accept": true
 						}
@@ -154,7 +160,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "{{TOKEN}}",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYmlsdC1hcGkudGVrcm9tLm5ldC9sb2dpbiIsImlhdCI6MTY1ODQ4OTU4NywiZXhwIjoxNjU4NDkzMTg3LCJuYmYiOjE2NTg0ODk1ODcsImp0aSI6IjZUbmJxV21GZk9oTDhTQXUiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.uO4w95zAzDx0ejqk5Jb40yES5RiZpJHp7kB2KqacPN8",
 									"type": "string"
 								}
 							]
@@ -172,6 +178,17 @@
 								"type": "text"
 							}
 						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "mhsn_rtrk@outlook.com",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
 						"url": {
 							"raw": "{{api}}/whois",
 							"host": [
@@ -197,7 +214,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYmlsbC10ZWtyb20udGVrcm9tLnRlc3QvbG9naW4iLCJpYXQiOjE2NjI1MzkxNTgsImV4cCI6MTY2MjU0Mjc1OCwibmJmIjoxNjYyNTM5MTU4LCJqdGkiOiI5M1JSbUdlZEllU0d4dVMzIiwic3ViIjoiMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.CqHskcLWG0Nt6D-iQptvdvWjmjI86gg4nS7WiBgFUno",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYmlsbC10ZWtyb20udGVrcm9tLnRlc3QvbG9naW4iLCJpYXQiOjE2NTgyMTQ1NzgsImV4cCI6MTY1ODIxODE3OCwibmJmIjoxNjU4MjE0NTc4LCJqdGkiOiJRdFVXZ2xJN0hDRDV4R2cyIiwic3ViIjoiMiIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.8NIM1J4DC0MbcshOVXk3FgsB2VX85H727U4lErDIF2U",
 									"type": "string"
 								}
 							]
@@ -247,7 +264,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYmlsbC10ZWtyb20udGVrcm9tLnRlc3QvbG9naW4iLCJpYXQiOjE2NjI1MzkyNDUsImV4cCI6MTY2MjU0Mjg0NSwibmJmIjoxNjYyNTM5MjQ1LCJqdGkiOiJ5UEtudXBJSnlrakRuT09OIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.L4WewVdGBYqAKL-dCdTC3WS6HAmFYLqsrcN1JMFD0Qs",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYmlsdC1hcGkudGVrcm9tLm5ldC9sb2dpbiIsImlhdCI6MTY1Njk0NTc4NywiZXhwIjoxNjU2OTQ5Mzg3LCJuYmYiOjE2NTY5NDU3ODcsImp0aSI6InFPZzRKZ1ZTcm02ZVNFQ1UiLCJzdWIiOiIzIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.nYLDtFPw0fPwpRdkkTtORP35XDSSHB1TViadnrdDGPE",
 									"type": "string"
 								}
 							]
@@ -266,19 +283,66 @@
 							}
 						],
 						"url": {
-							"raw": "{{api}}/admin-verify/:id",
+							"raw": "{{api}}/admin-verify/3",
 							"host": [
 								"{{api}}"
 							],
 							"path": [
 								"admin-verify",
-								":id"
-							],
-							"variable": [
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Forgot Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
 								{
-									"key": "id",
-									"value": "2"
+									"key": "email",
+									"value": "ramazan.onat@tsoft.com.tr",
+									"type": "text"
 								}
+							]
+						},
+						"url": {
+							"raw": "{{api}}/forgot-password",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"forgot-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reset Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"aa4b23cd36dff1fd0f4d8b222054405d4010b3d1fffeb4069f10b5413ae3246b\",\r\n    \"email\": \"ramazan.onat@tsoft.com.tr\",\r\n    \"password\": \"12345678Rr\",\r\n    \"password_confirmation\":\"12345678Rr\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api}}/reset-password",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"reset-password"
 							]
 						}
 					},
@@ -307,11 +371,77 @@
 			]
 		},
 		{
-			"name": "Platform",
+			"name": "User",
 			"item": [
 				{
-					"name": "Get Platforms",
+					"name": "Add User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"ramazan\",\r\n    \"email\":\"ramazan.onat2@gmail.com.tr\",\r\n    \"phone\":\"05307997100\",\r\n    \"code\": \"\",\r\n    \"password\":\"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api}}/user",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"testDeneme\",\r\n    \"description\":\"deneme desc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api}}/user/1",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User",
 					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
 						"disabledSystemHeaders": {
 							"accept": true
 						}
@@ -330,56 +460,38 @@
 								"type": "text"
 							}
 						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"role\" : true,\r\n    \"permission\" : true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
-							"raw": "{{api}}/platforms",
+							"raw": "{{api}}/user",
 							"host": [
 								"{{api}}"
 							],
 							"path": [
-								"platforms"
+								"user"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "Show Platforms",
+					"name": "Show User",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": {
-							"raw": "{{api}}/platforms/:id",
-							"host": [
-								"{{api}}"
-							],
-							"path": [
-								"platforms",
-								":id"
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": null
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Add Platform",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\":\"tsoft\",\r\n    \"description\":\"kısaca açıklama bu şekilde\",\r\n    \"hotnocApiPass\": \"nocGeneral9182\",\r\n    \"hotnocApiUsername\":\"nocGeneral@bill.com\"\r\n}",
+							"raw": "{\r\n    \"role\" : true,\r\n    \"permission\" : true\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -387,155 +499,31 @@
 							}
 						},
 						"url": {
-							"raw": "{{api}}/platforms",
+							"raw": "{{api}}/user/1",
 							"host": [
 								"{{api}}"
 							],
 							"path": [
-								"platforms"
+								"user",
+								"1"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "Update Platform",
-					"request": {
-						"method": "PUT",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"name\":\"tsoft\",\r\n    \"description\":\"kısaca açıklama bu şekilde\",\r\n    \"hotnocApiPass\": \"nocGeneral9182\",\r\n    \"hotnocApiUsername\":\"nocGeneral@bill.com\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{api}}/platforms/:id",
-							"host": [
-								"{{api}}"
-							],
-							"path": [
-								"platforms",
-								":id"
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": null
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Delete Platform",
+					"name": "Delete User",
 					"request": {
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{api}}/platforms/:id",
+							"raw": "{{api}}/user/2",
 							"host": [
 								"{{api}}"
 							],
 							"path": [
-								"platforms",
-								":id"
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": "1"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Add Platform domains",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"domains\": [\r\n        \"tsoft.com\",\r\n        \"test.com\"\r\n    ]\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{api}}/platforms/domain/:id",
-							"host": [
-								"{{api}}"
-							],
-							"path": [
-								"platforms",
-								"domain",
-								":id"
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": "1"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Delete Platform domains",
-					"request": {
-						"method": "DELETE",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"domains\": [\r\n        \"a\",\r\n        \"b\",\r\n        \"c\",\r\n        \"d\"\r\n    ]\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{api}}/platforms/domain/:id",
-							"host": [
-								"{{api}}"
-							],
-							"path": [
-								"platforms",
-								"domain",
-								":id"
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": null
-								}
+								"user",
+								"2"
 							]
 						}
 					},
@@ -557,6 +545,16 @@
 								}
 							},
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYmlsbC10ZWtyb20udGVrcm9tLnRlc3QvYWNjb3VudC9sb2dpbiIsImlhdCI6MTY1ODEzMDY5NiwiZXhwIjoxNjU4MTM0Mjk2LCJuYmYiOjE2NTgxMzA2OTYsImp0aSI6IjROUTY4T1ZXdjl1Z2o0RjAiLCJzdWIiOiIxIiwicHJ2IjoiYzhlZTFmYzg5ZTc3NWVjNGM3Mzg2NjdlNWJlMTdhNTkwYjZkNDBmYyJ9.2nVqwqA_eRAsT_kQkGk6gkc0WTWNAxum4aJlKvZkJsQ",
+											"type": "string"
+										}
+									]
+								},
 								"method": "POST",
 								"header": [
 									{
@@ -628,7 +626,7 @@
 									"formdata": [
 										{
 											"key": "email",
-											"value": "txtx436872@gmail.com",
+											"value": "ramazan.onat@tsoft.com.tr",
 											"type": "text"
 										},
 										{
@@ -638,12 +636,12 @@
 										},
 										{
 											"key": "name",
-											"value": "muhsin",
+											"value": "ramazan",
 											"type": "text"
 										},
 										{
 											"key": "surname",
-											"value": "erturk",
+											"value": "onat",
 											"type": "text"
 										},
 										{
@@ -654,11 +652,12 @@
 									]
 								},
 								"url": {
-									"raw": "{{api}}/register",
+									"raw": "{{api}}/account/register",
 									"host": [
 										"{{api}}"
 									],
 									"path": [
+										"account",
 										"register"
 									]
 								}
@@ -738,53 +737,6 @@
 					]
 				},
 				{
-					"name": "Get Account",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{api}}/account?include=createdByUser",
-							"host": [
-								"{{api}}"
-							],
-							"path": [
-								"account"
-							],
-							"query": [
-								{
-									"key": "include",
-									"value": "createdByUser"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Show Account",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{api}}/account/:id",
-							"host": [
-								"{{api}}"
-							],
-							"path": [
-								"account",
-								":id"
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": null
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
 					"name": "Add Account",
 					"request": {
 						"method": "POST",
@@ -793,16 +745,11 @@
 								"key": "Accept",
 								"value": "application/json",
 								"type": "text"
-							},
-							{
-								"key": "Accept-Language",
-								"value": "tr",
-								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\":\"testlive\",\r\n    \"surname\": \"testlive\",\r\n    \"email\": \"testlive@gmail.com\",\r\n    \"password\": 123456\r\n}",
+							"raw": "{\r\n    \"name\":\"Ramazan\",\r\n    \"surname\": \"Onat\",\r\n    \"phone\": \"05307997100\",\r\n    \"code\": \"\",\r\n    \"email\": \"aa123@aa.com\",\r\n    \"password\": 123456\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -834,7 +781,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\":\"test1\",\r\n    \"surname\":\"test1\"\r\n}",
+							"raw": "{\r\n    \"name\":\"test\",\r\n    \"surname\":\"test\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -842,19 +789,48 @@
 							}
 						},
 						"url": {
-							"raw": "{{api}}/account/:id",
+							"raw": "{{api}}/account/1",
 							"host": [
 								"{{api}}"
 							],
 							"path": [
 								"account",
-								":id"
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Account",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api}}/account",
+							"host": [
+								"{{api}}"
 							],
-							"variable": [
-								{
-									"key": "id",
-									"value": null
-								}
+							"path": [
+								"account"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Account",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api}}/account/12",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"account",
+								"12"
 							]
 						}
 					},
@@ -864,27 +840,15 @@
 					"name": "Delete Account",
 					"request": {
 						"method": "DELETE",
-						"header": [
-							{
-								"key": "Accept-Language",
-								"value": "tr",
-								"type": "text"
-							}
-						],
+						"header": [],
 						"url": {
-							"raw": "{{api}}/account/:id",
+							"raw": "{{api}}/account/2",
 							"host": [
 								"{{api}}"
 							],
 							"path": [
 								"account",
-								":id"
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": null
-								}
+								"2"
 							]
 						}
 					},
@@ -913,10 +877,75 @@
 			]
 		},
 		{
-			"name": "Site",
+			"name": "Platform",
 			"item": [
 				{
-					"name": "Get Site",
+					"name": "Add Platform",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"tsoft\",\r\n    \"description\":\"kısaca açıklama bu şekilde\",\r\n    \"hotnocApiPass\": \"nocGeneral9182\",\r\n    \"hotnocApiUsername\":\"nocGeneral@bill.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api}}/platforms",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"platforms"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Platform",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"testDeneme\",\r\n    \"description\":\"deneme desc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api}}/platforms/1",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"platforms",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Platforms",
 					"protocolProfileBehavior": {
 						"disabledSystemHeaders": {
 							"accept": true
@@ -937,48 +966,161 @@
 							}
 						],
 						"url": {
-							"raw": "{{api}}/site",
+							"raw": "{{api}}/platforms",
 							"host": [
 								"{{api}}"
 							],
 							"path": [
-								"site"
-							],
-							"query": [
-								{
-									"key": "include",
-									"value": "createdByUser,account",
-									"disabled": true
-								}
+								"platforms"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "Show Site",
+					"name": "Show Platforms",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{api}}/site/:id",
+							"raw": "{{api}}/platforms/2",
 							"host": [
 								"{{api}}"
 							],
 							"path": [
-								"site",
-								":id"
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": "1"
-								}
+								"platforms",
+								"2"
 							]
 						}
 					},
 					"response": []
 				},
+				{
+					"name": "Delete Platform",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{api}}/platforms/2",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"platforms",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Platform domains",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"domains\": [\r\n        \"1-a.com\",\r\n        \"maras.hotnoc.net\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api}}/platforms/domain/2",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"platforms",
+								"domain",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Platform domains",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"domains\": [\r\n        \"1-a.com\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api}}/platforms/domain/2",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"platforms",
+								"domain",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Platform Packages",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "tr",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api}}/platforms/package/2",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"platforms",
+								"package",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Site",
+			"item": [
 				{
 					"name": "Add Site",
 					"request": {
@@ -997,7 +1139,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\":\"testlive22222\",\r\n    \"accountId\": 44,\r\n    \"email\": \"d12345678911221@aaa.com\",\r\n    \"baseDomain\":\"tsoft.biz\",\r\n    \"platformId\" : 4,\r\n    \"packageId\": 2,\r\n    \"ccMails\": \"muhsin.erturk@tsoft.com.tr\"\r\n}",
+							"raw": "{\r\n    \"name\":\"demoramo123\",\r\n    \"accountId\": 1,\r\n    \"email\": \"ramazan.onat@tsoft.com.tr\",\r\n    \"baseDomain\":\"tsoft.biz\",\r\n    \"platformId\" : 1,\r\n    \"packageId\": 1,\r\n    \"ccMails\": \"a@a.com,b@b.com,c@c.com\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1037,19 +1179,59 @@
 							}
 						},
 						"url": {
-							"raw": "{{api}}/account/:id",
+							"raw": "{{ramazan}}/account/1",
+							"host": [
+								"{{ramazan}}"
+							],
+							"path": [
+								"account",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Site",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api}}/site",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"site"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Site",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api}}/account/1",
 							"host": [
 								"{{api}}"
 							],
 							"path": [
 								"account",
-								":id"
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": "1"
-								}
+								"1"
 							]
 						}
 					},
@@ -1061,44 +1243,13 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{api}}/site/:id",
+							"raw": "{{api}}/site/3",
 							"host": [
 								"{{api}}"
 							],
 							"path": [
 								"site",
-								":id"
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": "2"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Remote Site",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{api}}/site/remote/:id",
-							"host": [
-								"{{api}}"
-							],
-							"path": [
-								"site",
-								"remote",
-								":id"
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": "2"
-								}
+								"3"
 							]
 						}
 					},
@@ -1109,54 +1260,6 @@
 		{
 			"name": "Package",
 			"item": [
-				{
-					"name": "Get Package",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{api}}/package",
-							"host": [
-								"{{api}}"
-							],
-							"path": [
-								"package"
-							],
-							"query": [
-								{
-									"key": "include",
-									"value": "service",
-									"disabled": true
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Show Package",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{api}}/package/:id",
-							"host": [
-								"{{api}}"
-							],
-							"path": [
-								"package",
-								":id"
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": "1"
-								}
-							]
-						}
-					},
-					"response": []
-				},
 				{
 					"name": "Add Package",
 					"request": {
@@ -1175,7 +1278,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Test Paket4\",\r\n    \"serviceId\": 1,\r\n    \"price\": 18,\r\n    \"isMain\": true,\r\n    \"code\": \"tsoft_demo\",\r\n    \"packageTime\": 30,\r\n    \"packageTimeType\": \"day\",\r\n    \"licences\": [\r\n        1\r\n    ],\r\n    \"platformId\": 4\r\n}",
+							"raw": "{\r\n    \"name\": \"Test Paket\",\r\n    \"serviceId\": 1,\r\n    \"price\": 15,\r\n    \"isMain\": true,\r\n    \"code\": \"tsoft_demo\",\r\n    \"packageTime\": 30,\r\n    \"packageTimeType\": \"day\",\r\n    \"licences\": [\r\n        1,25\r\n    ],\r\n    \"platformId\": 1\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1207,7 +1310,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Test Paket3\",\r\n    \"serviceId\": 1,\r\n    \"price\": 18,\r\n    \"isMain\": true,\r\n    \"code\": \"tsoft_demo\",\r\n    \"packageTime\": 30,\r\n    \"packageTimeType\": \"day\",\r\n    \"licences\": [\r\n        1,2\r\n    ],\r\n    \"platformId\": 4\r\n}",
+							"raw": "{\r\n    \"name\": \"Test Paket\",\r\n    \"serviceId\": 1,\r\n    \"price\": 15,\r\n    \"isMain\": true,\r\n    \"code\": \"tsoft_demo\",\r\n    \"packageTime\": 30,\r\n    \"packageTimeType\": \"day\",\r\n    \"licences\": [\r\n        1,25\r\n    ],\r\n    \"platformId\": 1\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1215,19 +1318,48 @@
 							}
 						},
 						"url": {
-							"raw": "{{api}}/package/:id",
+							"raw": "{{ramazan}}/package/1",
+							"host": [
+								"{{ramazan}}"
+							],
+							"path": [
+								"package",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Package",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api}}/package",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"package"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Package",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api}}/package/1",
 							"host": [
 								"{{api}}"
 							],
 							"path": [
 								"package",
-								":id"
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": "1"
-								}
+								"1"
 							]
 						}
 					},
@@ -1239,37 +1371,13 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{api}}/package/:id",
+							"raw": "{{ramazan}}/package/1\n",
 							"host": [
-								"{{api}}"
+								"{{ramazan}}"
 							],
 							"path": [
 								"package",
-								":id"
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": null
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Get Main Package By Platform",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{api}}/platforms/package",
-							"host": [
-								"{{api}}"
-							],
-							"path": [
-								"platforms",
-								"package"
+								"1\n"
 							]
 						}
 					},
@@ -1280,71 +1388,6 @@
 		{
 			"name": "Licence",
 			"item": [
-				{
-					"name": "Get Licence",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{api}}/licence",
-							"host": [
-								"{{api}}"
-							],
-							"path": [
-								"licence"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Show Licence",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{api}}/licence/:id",
-							"host": [
-								"{{api}}"
-							],
-							"path": [
-								"licence",
-								":id"
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": null
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Delete Licence",
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"url": {
-							"raw": "{{api}}/licence/:id",
-							"host": [
-								"{{api}}"
-							],
-							"path": [
-								"licence",
-								":id"
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": null
-								}
-							]
-						}
-					},
-					"response": []
-				},
 				{
 					"name": "Add Licence",
 					"request": {
@@ -1363,7 +1406,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Muhsintest-licence\",\r\n    \"description\":\"bu lisans deneme lisansıdır.\"\r\n}",
+							"raw": "{\r\n    \"name\": \"Ramazantest-licence\",\r\n    \"description\":\"bu lisans deneme lisansıdır.\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1403,19 +1446,66 @@
 							}
 						},
 						"url": {
-							"raw": "{{api}}/licence/:id",
+							"raw": "{{ramazan}}/licence/1",
+							"host": [
+								"{{ramazan}}"
+							],
+							"path": [
+								"licence",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Licence",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ramazan}}/licence",
+							"host": [
+								"{{ramazan}}"
+							],
+							"path": [
+								"licence"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Licence",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api}}/licence/1",
 							"host": [
 								"{{api}}"
 							],
 							"path": [
 								"licence",
-								":id"
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Licence",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{ramazan}}/licence/1\n",
+							"host": [
+								"{{ramazan}}"
 							],
-							"variable": [
-								{
-									"key": "id",
-									"value": null
-								}
+							"path": [
+								"licence",
+								"1\n"
 							]
 						}
 					},
@@ -1426,6 +1516,38 @@
 		{
 			"name": "Service",
 			"item": [
+				{
+					"name": "addService",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "tr",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"deneme\",\r\n    \"platforms\" : [\r\n        1,2,3,4,5\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api}}/service",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"service"
+							]
+						}
+					},
+					"response": []
+				},
 				{
 					"name": "getService",
 					"protocolProfileBehavior": {
@@ -1447,80 +1569,6 @@
 								"type": "text"
 							}
 						],
-						"url": {
-							"raw": "{{api}}/service/",
-							"host": [
-								"{{api}}"
-							],
-							"path": [
-								"service",
-								""
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "showService",
-					"protocolProfileBehavior": {
-						"disabledSystemHeaders": {
-							"accept": true
-						}
-					},
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"type": "text"
-							},
-							{
-								"key": "Accept-Language",
-								"value": "tr",
-								"type": "text"
-							}
-						],
-						"url": {
-							"raw": "{{api}}/service/:id",
-							"host": [
-								"{{api}}"
-							],
-							"path": [
-								"service",
-								":id"
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": "2"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "addService",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Accept-Language",
-								"value": "tr",
-								"type": "text",
-								"disabled": true
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"name\" : \"deneme3\",\r\n    \"platforms\" : [\r\n        1\r\n    ]\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
 						"url": {
 							"raw": "{{api}}/service",
 							"host": [
@@ -1546,7 +1594,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\" : \"test1\"\r\n\r\n}",
+							"raw": "{\r\n    \"name\" : \"test\",\r\n    \"platforms\" : [\r\n        8,9\r\n    ]\r\n\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1554,19 +1602,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{api}}/service/:id",
+							"raw": "{{api}}/service/3",
 							"host": [
 								"{{api}}"
 							],
 							"path": [
 								"service",
-								":id"
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": "4"
-								}
+								"3"
 							]
 						}
 					},
@@ -1584,19 +1626,13 @@
 							}
 						],
 						"url": {
-							"raw": "{{api}}/service/:id",
+							"raw": "{{api}}/service/23",
 							"host": [
 								"{{api}}"
 							],
 							"path": [
 								"service",
-								":id"
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": "2"
-								}
+								"23"
 							]
 						}
 					},
@@ -1637,7 +1673,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"role\" : [\r\n        \"test\"\r\n    ]\r\n}",
+									"raw": "{\r\n    \"role\" : [\r\n        \"Salesman\"\r\n    ]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1645,20 +1681,14 @@
 									}
 								},
 								"url": {
-									"raw": "{{api}}/role/assign-role/:id",
+									"raw": "{{api}}/role/assign-role/2",
 									"host": [
 										"{{api}}"
 									],
 									"path": [
 										"role",
 										"assign-role",
-										":id"
-									],
-									"variable": [
-										{
-											"key": "id",
-											"value": "2"
-										}
+										"2"
 									]
 								}
 							},
@@ -1671,29 +1701,12 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"role\" : \"Support\"\r\n}",
+									"raw": "{\r\n    \"role\" : [\r\n        \"Super Admin\"\r\n    ]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
 										}
 									}
-								},
-								"url": {
-									"raw": "{{api}}/role/revoke-role/:id",
-									"host": [
-										"{{api}}"
-									],
-									"path": [
-										"role",
-										"revoke-role",
-										":id"
-									],
-									"variable": [
-										{
-											"key": "id",
-											"value": null
-										}
-									]
 								}
 							},
 							"response": []
@@ -1717,19 +1730,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{api}}/role/2?permission=true",
+							"raw": "{{api}}/role",
 							"host": [
 								"{{api}}"
 							],
 							"path": [
-								"role",
-								"2"
-							],
-							"query": [
-								{
-									"key": "permission",
-									"value": "true"
-								}
+								"role"
 							]
 						}
 					},
@@ -1779,7 +1785,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\" : \"aaaaa\"\r\n}",
+							"raw": "{\r\n    \"name\" : \"Super Admin\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1787,19 +1793,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{api}}/role/:id",
+							"raw": "{{api}}/role/1",
 							"host": [
 								"{{api}}"
 							],
 							"path": [
 								"role",
-								":id"
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": null
-								}
+								"1"
 							]
 						}
 					},
@@ -1822,19 +1822,13 @@
 							}
 						],
 						"url": {
-							"raw": "{{api}}/role/:id",
+							"raw": "{{api}}/role/6",
 							"host": [
 								"{{api}}"
 							],
 							"path": [
 								"role",
-								":id"
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": null
-								}
+								"6"
 							]
 						}
 					},
@@ -1871,7 +1865,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"permission\" : [\r\n        \"account.read\"\r\n    ]\r\n}",
+									"raw": "{\r\n    \"permission\" : [\r\n        \"site.tsoft.*\"\r\n    ]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1879,7 +1873,7 @@
 									}
 								},
 								"url": {
-									"raw": "{{api}}/permission/assign-permission/role/:id",
+									"raw": "{{api}}/permission/assign-permission/role/3",
 									"host": [
 										"{{api}}"
 									],
@@ -1887,13 +1881,7 @@
 										"permission",
 										"assign-permission",
 										"role",
-										":id"
-									],
-									"variable": [
-										{
-											"key": "id",
-											"value": "2"
-										}
+										"3"
 									]
 								}
 							},
@@ -1922,7 +1910,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"permission\" : [\r\n        \"accountHasService.tsoft.create\"\r\n    ]\r\n}",
+									"raw": "{\r\n    \"permission\" : [\r\n        \"hasPermission.*\"\r\n    ]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1930,7 +1918,7 @@
 									}
 								},
 								"url": {
-									"raw": "{{api}}/permission/revoke-permission/role/:id",
+									"raw": "{{api}}/permission/revoke-permission/role/1",
 									"host": [
 										"{{api}}"
 									],
@@ -1938,13 +1926,7 @@
 										"permission",
 										"revoke-permission",
 										"role",
-										":id"
-									],
-									"variable": [
-										{
-											"key": "id",
-											"value": null
-										}
+										"1"
 									]
 								}
 							},
@@ -1973,7 +1955,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"permission\" : [\r\n        \"service.tsoft.read\"\r\n    ]\r\n}",
+									"raw": "{\r\n    \"permission\" : [\r\n        \"accountHasService.*\"\r\n    ]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1981,7 +1963,7 @@
 									}
 								},
 								"url": {
-									"raw": "{{api}}/permission/assign-permission/model/:id",
+									"raw": "{{api}}/permission/assign-permission/model/2",
 									"host": [
 										"{{api}}"
 									],
@@ -1989,13 +1971,7 @@
 										"permission",
 										"assign-permission",
 										"model",
-										":id"
-									],
-									"variable": [
-										{
-											"key": "id",
-											"value": "2"
-										}
+										"2"
 									]
 								}
 							},
@@ -2024,7 +2000,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"permission\" : [\r\n        \"platform.read\"\r\n        ]\r\n}",
+									"raw": "{\r\n    \"permission\" : [\r\n        \"test\",\"dene\"\r\n        ]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -2032,7 +2008,7 @@
 									}
 								},
 								"url": {
-									"raw": "{{api}}/permission/revoke-permission/model/:id",
+									"raw": "{{api}}/permission/revoke-permission/model/1",
 									"host": [
 										"{{api}}"
 									],
@@ -2040,13 +2016,7 @@
 										"permission",
 										"revoke-permission",
 										"model",
-										":id"
-									],
-									"variable": [
-										{
-											"key": "id",
-											"value": null
-										}
+										"1"
 									]
 								}
 							},
@@ -2060,12 +2030,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{api}}/permission",
+							"raw": "{{api}}/permission/1",
 							"host": [
 								"{{api}}"
 							],
 							"path": [
-								"permission"
+								"permission",
+								"1"
 							]
 						}
 					},
@@ -2112,19 +2083,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{api}}/permission/:id",
+							"raw": "{{api}}/permission/1",
 							"host": [
 								"{{api}}"
 							],
 							"path": [
 								"permission",
-								":id"
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": null
-								}
+								"1"
 							]
 						}
 					},
@@ -2136,19 +2101,13 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{api}}/permission/:id",
+							"raw": "{{api}}/permission/3",
 							"host": [
 								"{{api}}"
 							],
 							"path": [
 								"permission",
-								":id"
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": null
-								}
+								"3"
 							]
 						}
 					},
@@ -2167,11 +2126,6 @@
 							{
 								"key": "Accept",
 								"value": "application/json",
-								"type": "text"
-							},
-							{
-								"key": "Accept-Language",
-								"value": "tr",
 								"type": "text"
 							}
 						],
@@ -2194,71 +2148,9 @@
 			"name": "Account Service",
 			"item": [
 				{
-					"name": "Get Account Service",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{api}}/account/service?include=account,service,site,payment,platform,package",
-							"host": [
-								"{{api}}"
-							],
-							"path": [
-								"account",
-								"service"
-							],
-							"query": [
-								{
-									"key": "include",
-									"value": "account,service,site,payment,platform,package"
-								},
-								{
-									"key": "filter[account.name]",
-									"value": "Muhsin",
-									"disabled": true
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
 					"name": "Add Account Service",
 					"request": {
 						"method": "POST",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"accountId\": 1,\r\n    \"serviceId\": 1,\r\n    \"platformId\": 1,\r\n    \"siteId\": 1,\r\n    \"quantity\" : 12323,\r\n    \"packageId\" : 1,\r\n    \"startTime\" : \"22/06/2022 12:00\",\r\n    \"endTime\" : \"23/06/2022 12:00\",\r\n    \"title\" : \"deneme\",\r\n    \"description\" : \"deneme\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{api}}/account/service",
-							"host": [
-								"{{api}}"
-							],
-							"path": [
-								"account",
-								"service"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "(Bu servis yok)Update Account Service",
-					"request": {
-						"method": "PUT",
 						"header": [
 							{
 								"key": "Accept",
@@ -2299,21 +2191,42 @@
 								"type": "text"
 							}
 						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Ramazana\",\r\n    \"surname\": \"Onat\",\r\n    \"email\": \"aa11@aa.com\",\r\n    \"password\": 123456\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
-							"raw": "{{api}}/account/service/:id",
+							"raw": "{{api}}/account/service/1",
 							"host": [
 								"{{api}}"
 							],
 							"path": [
 								"account",
 								"service",
-								":id"
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Account Service",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api}}/account/service",
+							"host": [
+								"{{api}}"
 							],
-							"variable": [
-								{
-									"key": "id",
-									"value": null
-								}
+							"path": [
+								"account",
+								"service"
 							]
 						}
 					},
@@ -2341,7 +2254,7 @@
 							},
 							{
 								"key": "Accept-Language",
-								"value": "en",
+								"value": "tr",
 								"type": "text"
 							}
 						],
@@ -2383,12 +2296,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{api}}/concept",
+							"raw": "{{api}}/role",
 							"host": [
 								"{{api}}"
 							],
 							"path": [
-								"concept"
+								"role"
 							]
 						}
 					},
@@ -2409,19 +2322,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{api}}/concept/:id",
+							"raw": "{{api}}/role/1",
 							"host": [
 								"{{api}}"
 							],
 							"path": [
-								"concept",
-								":id"
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": null
-								}
+								"role",
+								"1"
 							]
 						}
 					},
@@ -2444,193 +2351,48 @@
 							}
 						],
 						"url": {
-							"raw": "{{api}}/concept/:id",
+							"raw": "{{api}}/role/6",
 							"host": [
 								"{{api}}"
 							],
 							"path": [
-								"concept",
-								":id"
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": null
-								}
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "User",
-			"item": [
-				{
-					"name": "Get User",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true,
-						"disabledSystemHeaders": {
-							"accept": true
-						}
-					},
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"type": "text"
-							},
-							{
-								"key": "Accept-Language",
-								"value": "tr",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"role\" : true,\r\n    \"permission\" : true\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{api}}/user/3",
-							"host": [
-								"{{api}}"
-							],
-							"path": [
-								"user",
-								"3"
-							],
-							"query": [
-								{
-									"key": "page",
-									"value": "2",
-									"disabled": true
-								},
-								{
-									"key": "limit",
-									"value": "21",
-									"disabled": true
-								}
+								"role",
+								"6"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "Show User",
+					"name": "Test Copy",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
 						"method": "GET",
-						"header": [
-							{
-								"key": "Accept-Language",
-								"value": "en",
-								"type": "text"
-							}
-						],
+						"header": [],
 						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"role\" : true,\r\n    \"permission\" : true\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{api}}/user/:id",
-							"host": [
-								"{{api}}"
-							],
-							"path": [
-								"user",
-								":id"
-							],
-							"variable": [
+							"mode": "formdata",
+							"formdata": [
 								{
-									"key": "id",
-									"value": "2"
+									"key": "email",
+									"value": "test@test.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "1234561",
+									"type": "text"
 								}
 							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Add User",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"name\":\"muhsin\",\r\n    \"email\":\"mhsn_rtrk@outlook.com\",\r\n    \"password\" : 123456\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
 						},
 						"url": {
-							"raw": "{{api}}/user",
+							"raw": "{{api}}/test",
 							"host": [
 								"{{api}}"
 							],
 							"path": [
-								"user"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Update User",
-					"request": {
-						"method": "PUT",
-						"header": [
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"name\":\"muhsin erturk\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{api}}/user/:id",
-							"host": [
-								"{{api}}"
-							],
-							"path": [
-								"user",
-								":id"
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": null
-								}
+								"test"
 							]
 						}
 					},
@@ -2639,60 +2401,70 @@
 			]
 		},
 		{
-			"name": "swagger render",
+			"name": "Test",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
 			"request": {
 				"method": "GET",
 				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "test@test.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "1234561",
+							"type": "text"
+						}
+					]
+				},
 				"url": {
-					"raw": "{{api}}/swagger-render",
+					"raw": "{{api}}/test",
 					"host": [
 						"{{api}}"
 					],
 					"path": [
-						"swagger-render"
+						"test"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "https://tekrom.hotnoc.net/service/site/login/12007",
+			"name": "Test2",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
 			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "NzE5NDRhNDJmODAwNGYzMg==",
-							"type": "string"
-						}
-					]
-				},
-				"method": "POST",
+				"method": "GET",
 				"header": [],
 				"body": {
 					"mode": "formdata",
 					"formdata": [
 						{
-							"key": "user_id",
-							"value": "2",
+							"key": "email",
+							"value": "test@test.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "1234561",
 							"type": "text"
 						}
 					]
 				},
 				"url": {
-					"raw": "https://tekrom.hotnoc.net/service/site/login/1200",
-					"protocol": "https",
+					"raw": "{{api}}/test",
 					"host": [
-						"tekrom",
-						"hotnoc",
-						"net"
+						"{{api}}"
 					],
 					"path": [
-						"service",
-						"site",
-						"login",
-						"1200"
+						"test"
 					]
 				}
 			},
